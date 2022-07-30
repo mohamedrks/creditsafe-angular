@@ -1,0 +1,34 @@
+<h1 mat-dialog-title>Add City {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Please fill all the fields here !!</p>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>City Name</mat-label>
+    <input matInput [(ngModel)]="data.name" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Country</mat-label>
+    <input matInput [(ngModel)]="data.country" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>State</mat-label>
+    <input matInput [(ngModel)]="data.state" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Tourist Rating</mat-label>
+    <input matInput type="number" [(ngModel)]="data.touristRating" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Date Established</mat-label>
+    <input matInput type="number" [(ngModel)]="data.dateEstablished" />
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Estimated Population</mat-label>
+    <input matInput type="number" [(ngModel)]="data.estimatedPopulation" />
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="warn" (click)="onNoClick()">Cancel</button>
+  <button mat-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>
+    Add New City
+  </button>
+</div>
