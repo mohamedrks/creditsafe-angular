@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { City } from 'src/app/models/city';
+import { environment } from 'src/environments/environment';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -12,7 +13,7 @@ const httpOptions = {
 };
 
 // API URL retrieved from here.
-const WEATHER_API_URL = 'https://localhost:5001/';
+const WEATHER_API_URL = environment.api;
 
 @Injectable({
   providedIn: 'root',
